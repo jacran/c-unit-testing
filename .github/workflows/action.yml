@@ -3,7 +3,6 @@ name: Unit Test
 # Trigger event for action
 on: push
 
-
 jobs:
     install-docker:
         runs-on: ubuntu-latest
@@ -15,4 +14,4 @@ jobs:
               run: docker build -t unit-test-image -f Dockerfile .
             
             - name: Run Docker Image
-              run: docker run --tm unti-test-image
+              run: docker run --rm unit-test-image
